@@ -1,0 +1,23 @@
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const data = req.body;
+
+  // ←←← PUT YOUR ZAPIER WEBHOOK URL HERE (we'll get it in Step 5)
+  const zapierUrl = 'https://hooks.zapier.com/hooks/catch/XXXXXXXXXXXXXXXX/';
+
+  try {
+    await fetch(zapierUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false });
+  }
+}
