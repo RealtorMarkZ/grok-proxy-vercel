@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const data = req.body;
 
   const apiKey = '2o55uwntnel-2z89e6mheqk';  // Your Buying Buddy API key
-  const mlsId = 'YOUR_MLS_ID_HERE';  // ← Replace this! e.g., 'mfr' or whatever your dashboard shows
+  const mlsId = '778334';  // ← Replace this! e.g., 'mfr' or whatever your dashboard shows
 
   const baseUrl = 'https://www.leadsandcontacts.com/api-lead/add';
 
