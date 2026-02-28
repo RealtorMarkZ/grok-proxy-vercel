@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     }
 
     // Use your embedded key from Vercel env vars
-    const apiKey = process.env.GROK_API_KEY || process.env.XAI_API_KEY;
+    const apiKey = process.env.xai-nSUhuxyI0OBvj5Em9AL0x4S7elx9KR7Jbe4HZdFyF3vcmE5zBiVQMInbTC36kHxEN00jrUFXUN7bRFZm || process.env.XAI_API_KEY;
     if (!apiKey) {
       return res.status(500).json({ error: 'API key not configured in Vercel env vars' });
     }
